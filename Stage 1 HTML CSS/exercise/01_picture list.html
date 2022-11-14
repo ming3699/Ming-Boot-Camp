@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>picture list</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body{
+            background-color:   antiquewhite;
+        }
+        .img-list{
+            width: 180px;
+            /* height: 500px; */
+            overflow: hidden;
+            margin: 50px auto;
+            background-color: #F1F4F4;
+        }
+        .img-list li:not(:nth-child(3)){
+            margin-bottom: 9px;
+        }
+        .img-list img{
+                width: 100%;
+            }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <a href="#"><img src="./img/01/1.jpg.webp" alt="01"></a><br>
+        <img src="./img/01/2.jpg.webp" alt="02"><br>
+        <img src="./img/01/3.jpg.webp" alt="03"> 
+        </div>
+    -->
+        <ul class="img-list">
+            <li>
+                <a href="javascript:;">
+                    <img src="./img/01/1.jpg.webp" alt="watch">
+                </a>       
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./img/01/2.jpg.webp" alt="cleaner">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./img/01/3.jpg.webp" alt="book">
+                </a>
+            </li>
+        </ul>
+     
+    
+</body>
+</html>

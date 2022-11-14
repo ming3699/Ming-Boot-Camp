@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#info{
+				width: 300px;
+				height: 500px;
+				overflow: auto;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				// 当垂直滚动条到底时使表单项可用
+				// onscroll -  该事件会在元素的滚动条滚动时触发
+				var info=document.getElementById("info");
+				var inputs=document.getElementsByTagName("input");
+				info.onscroll=function(){
+					// 检查垂直滚动条是否滚动到底
+					if(info.scrollHeight - info.scrollTop <= info.clientHeight){
+						// 滚动条到底，是表单项可用
+						inputs[0].disabled = false;
+						inputs[1].disabled = false;
+					};
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<h3>welcome dear user</h3>
+		<p id="info">
+			Prime Minister Rishi Sunak is set to urge world leaders at COP27 to move "further and faster" in transitioning to renewable energy.
+			
+			Mr Sunak will travel to Egypt on Sunday for the UN climate summit after U-turning on a decision not to go.
+			
+			In his address on Monday, he will say Russia's invasion of Ukraine "reinforced" the importance of ending dependence on fossil fuels.
+			
+			COP27 follows a year of climate-related disasters and record temperatures.
+			
+			The prime minister will also tell leaders gathered in Sharm el-Sheikh not to "backslide" on commitments made at last year's COP26 summit in Glasgow intended to prevent global temperature rises to 1.5C above pre-industrial levels.
+			
+			The BBC understands that Mr Sunak will meet French President Emmanuel Macron at the summit this week and the topic of migrants crossing the Channel in small boats will likely be raised.
+			
+			The big issues facing Egypt's COP27 climate summit
+			Where does Rishi Sunak stand on climate change?
+			Is the UK on track to meet its climate targets?
+			A really simple guide to climate change
+			In a statement before his departure, Mr Sunak said: "When the world came together in Glasgow last year, nations agreed an historic roadmap for preventing catastrophic global warming. It is more important than ever that we deliver on those pledges.
+			
+			"Fighting climate change is not just a moral good - it is fundamental to our future prosperity and security.
+			
+			"Russia's invasion of Ukraine and contemptible manipulation of energy prices has only reinforced the importance of ending our dependence on fossil fuels.
+			
+			"We need to move further and faster to transition to renewable energy, and I will ensure the UK is at the forefront of this global movement as a clean energy superpower."
+			
+			It comes after the prime minister backtracked on attending the summit earlier this week.
+			
+			Mr Sunak had originally stated he would not travel to Egypt, arguing that his priority was to plug a £50bn hole in the public finances ahead of Chancellor Jeremy Hunt's autumn statement on 17 November.
+			
+			Labour's Ed Miliband said the prime minister "dithered" about attending the climate summit, adding that: "Britain needs to be in the climate leadership business."
+			
+			Speaking on the BBC's Sunday with Laura Kuenssberg, the shadow climate change secretary said it was now "cheaper to save the planet than to destroy it".
+			
+			"We're in the midst of an energy crisis," he said, adding that renewable energy sources were now much cheaper than fossil fuels.
+			
+			Mr Miliband insisted that switching to renewables was "the opportunity of the future" and that this was the "message we should be taking to COP".
+		Prime Minister Rishi Sunak is set to urge world leaders at COP27 to move "further and faster" in transitioning to renewable energy. 
+		</p>
+		<!--  -->
+        <input type="checkbox" name="" id="" value="" disabled="disabled"/>I have read the agreement.I will follow the agreement.
+		<input type="submit" value="Register" disabled="disabled"/>
+		
+	</body>
+</html>

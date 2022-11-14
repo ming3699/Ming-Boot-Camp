@@ -1,0 +1,22 @@
+/*commen style  */
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+body{
+    font: 14px/1.15 Camphor Pro VF,Camphor Pro,sans-serif;
+    color: #333;
+    min-width: 1226px;
+}
+/* middle container */
+.w{
+    width: 1226px;
+    margin: 0 auto;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .img-list {
+            width: 590px;
+            height: 315px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .img-list li {
+            position: absolute;
+        }
+
+        .img-list li:nth-child(3) {
+            z-index: 1;
+        }
+
+        .dot a {
+            /* display: block; */
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255,0.6);
+            border-radius: 50%;
+            float: left;
+            margin: 0 5px;
+            border: 2px solid transparent;
+            background-clip: content-box;
+        }
+
+        .dot {
+            position: absolute;
+            z-index: 999;
+            bottom: 20px;
+            left: 40px;
+        }
+        .dot a.active,
+        .dot a:hover{
+            background-color: #fff;
+            border: 2px solid rgba(255, 255, 255, .3);
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul class="img-list">
+        <li><a href="javascript:;"><img src="./img/05 jingdong slidwshow/s1 - Copy.png" alt="1"></a></li>
+        <li><a href="javascript:;"><img src="./img/05 jingdong slidwshow/s1.png" alt="2"></a></li>
+        <li><a href="javascript:;"><img src="./img/05 jingdong slidwshow/s2 - Copy.png" alt="3"></a></li>
+        <li><a href="javascript:;"><img src="./img/05 jingdong slidwshow/s2.png" alt="4"></a></li>
+        <li><a href="javascript:;"><img src="./img/05 jingdong slidwshow/s3 - Copy.png" alt="5"></a></li>
+        <li><a href="javascript:;"><img src="./img/05 jingdong slidwshow/s3 - Copy.png" alt="6"></a></li>
+        <li><a href="javascript:;"><img src="./img/05 jingdong slidwshow/s4 - Copy.png" alt="7"></a></li>
+        <li><a href="javascript:;"><img src="./img/05 jingdong slidwshow/s4 - Copy.png" alt="8"></a></li>
+        <div class="dot">
+            <a class="active" href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </ul>
+</body>
+
+</html>

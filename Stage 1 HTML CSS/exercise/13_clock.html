@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clock{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+            border-radius: 50%;
+            /* border: 10px solid black; */
+            background-image: url(./img/13/bg.png);
+            background-size: contain;
+        }
+        .clock > div{
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        /* hour */
+        .hour-wrapper{
+            position: absolute;
+            height: 60%;
+            width: 60%;
+            /* background-color: #bfa; */
+            animation: run 7200s linear infinite;
+        }
+        .hour{
+            height: 50%;
+            width: 6px;
+            background-color: #000;
+            margin: 0 auto;
+        }
+        /* minute */
+        .min-wrapper{
+            position: absolute;
+            height: 70%;
+            width: 70%;
+            /* background-color: #bfa; */
+            animation: run 600s linear infinite;
+        }
+        .min{
+            height: 50%;
+            width: 4px;
+            background-color: #000;
+            margin: 0 auto;
+        }
+        /* second */
+        .sec-wrapper{
+            position: absolute;
+            height: 90%;
+            width: 90%;
+            /* background-color: #bfa; */
+            animation: run 60s steps(60) infinite;
+        }
+        .sec{
+            height: 50%;
+            width: 2px;
+            background-color: #f00;
+            margin: 0 auto;
+        }
+        @keyframes run{
+            from{
+                transform: rotateZ(0);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- clock container -->
+    <div class="clock">
+        <!-- hour -->
+        <div class="hour-wrapper">
+            <div class="hour"></div>
+        </div>
+        <!-- minute -->
+        <div class="min-wrapper">
+            <div class="min"></div>
+        </div>
+        <!-- sec -->
+        <div class="sec-wrapper">
+            <div class="sec"></div>
+        </div>
+
+    </div>
+</body>
+</html>

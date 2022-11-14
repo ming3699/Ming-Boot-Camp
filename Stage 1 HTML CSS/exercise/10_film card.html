@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <style>
+        .outer{
+            width: 240px;
+            margin: 100px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        }
+        .img-wrapper img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+        /* .img-wrapper{
+            border: 1px red solid; 
+        } */
+        .info{
+            padding: 0 18px;
+            color: #acaaaa;
+            font-size: 14px;
+        }
+        .info .title{
+            color: #717171;
+            font-size: 18px;
+            margin: 13px 0 15px 0;
+        }
+        /* .category::before{
+          content:'\f3c5';
+          font-family: 'Font Awesome 5 Free';
+            font-weight: 900;  
+        } */
+        /* .info .category{
+            color: #acaaaa;
+            font-size: 14px;
+        } */
+        .info .category i{
+            padding-right: 7px;
+            padding-left: 4px;
+            /* margin-right: 7px; */
+        }
+        /* .info .intro{
+            color: #acaaaa;
+            font-size: 14px;
+        } */
+        .info .intro{
+            /* padding-left: 4px;
+            margin-top: 15px; */
+            line-height:20px ;
+            /* margin-bottom: 18px; */
+            margin: 15px 0 18px 4px;
+      
+        }
+        .star-wrapper{
+            border-top: 1px #e9e9e9 solid;
+            height: 46px;
+            line-height: 46px;
+            color: #ddd;
+        }
+        .star{
+            float: left;
+            margin-left: 16px;
+        }
+        .star-wrapper .fa-facebook{
+            float: right;
+            line-height: 46px;
+        }
+        .star-wrapper .highlight{
+            color: #b9cb41;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- outer box -->
+    <div class="outer">
+        <div class="img-wrapper">
+            <img src="./img/10/1.jpg" alt="">
+        </div>
+        <div class="info">
+            <h2 class="title">
+                Animation Films
+            </h2>
+            <h3 class="category">
+                <i class="fas fa-map-marker-alt"></i>
+                Animations
+            </h3>
+            <p class="intro">
+                Lorem Ipsum is simply dummy text of the printing & typesetting industry.
+            </p>
+        </div>
+        <div class="star-wrapper">
+            <ul class="star">
+                <li class="fas fa-star highlight"></li>
+                <li class="fas fa-star highlight"></li>
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+            </ul>
+            <!-- <span class="fab fa-facebook"></span> -->
+            <ul class="facebook">
+                <li class="fab fa-facebook"></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

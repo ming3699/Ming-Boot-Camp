@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./style/css.css">
+		<script>	
+		    /*
+			*定义一个函数，专门用来为指定元素绑定单击响应函数
+			* 参数:idstr要绑定单击响应函数的对象的id属性值
+			* fun 事件的回调函数，当单击元素时，该函数将会被触发
+			*/
+		    function myClick(idstr, fun){
+		    			   //为id为btn01的按钮绑定一个单击响应函数
+		    			   var btn=document.getElementById(idstr);
+		    			   btn.onclick=fun;
+		    }
+			
+			window.onload=function(){
+		              // 1 Create node Aberdeen，add under the #city
+				myClick("btn01",function(){
+					// 创建广州节点 <li>广州</li>
+					// 创建li元素节点，需要一个标签名作为参数，将创建好的对象作为返回值返回
+					var li=document.createElement("li");
+					// alert(li);
+					// 创建广州文本节点
+					var gzText=document.createTextNode("Aberdeen");
+					// 将gzText设置li的子节点
+					li.appendChild(gzText);
+					// 获取id为city的节点
+					var city=document.getElementById("city");
+					// 将li添加到city下
+					city.appendChild(li);
+				});
+				
+				// 2将广州节点插入到#bj前面
+				myClick("btn02",function(){
+					var li=document.createElement("li");
+					var gzText=document.createTextNode("London");
+					li.appendChild(gzText);
+					var bj=document.getElementById("bj");
+					var city=document.getElementById("city");
+					city.insertBefore(li, bj);
+				});
+				
+				// 3 Replace node #bj by node Leeds
+				myClick("btn03", function(){
+					var li=document.createElement("li");
+					var gzText=document.createTextNode("Leeds");
+					li.appendChild(gzText);
+					var bj=document.getElementById("bj");
+					var city=document.getElementById("city");
+					city.replaceChild(li,bj);
+				});
+				
+				// 4 Delete node #bj
+				myClick("btn04", function(){
+				
+					var bj=document.getElementById("bj");
+					// var city=document.getElementById("city");
+					// city.removeChild(bj);
+					bj.parentNode.removeChild(bj);
+				});
+				
+				// 5 Read HTML code in #city
+				myClick("btn05", function(){
+					var city=document.getElementById("city");
+					alert(city.innerHTML);
+				});
+				
+				// 6 Set HTML code in #bj
+				myClick("btn06", function(){
+					var bj=document.getElementById("bj");
+					bj.innerHTML="Aberdeen";
+				});
+				
+				// 7 Create node Glasgow under #city
+				myClick("btn07",function(){
+					var city=document.getElementById("city");
+					/*使用innerHTML也可以完成DOM的增删改的相关操作
+					*但是会重新替换掉所有的li标签，如果li标签有绑定其它功能，也会被覆盖，不建议用
+					一般我们会两种方式结合使用
+					*/
+					// city.innerHTML+="<li>Aberdeen</li>";
+					var li=document.createElement("li");
+					li.innerHTML="Glasgow";
+					city.appendChild(li);
+				});
+				
+			};
+		
+
+			
+		</script>
+	</head>
+	<body>
+		<div id="total">
+			<div class="inner">
+				<p>
+					which city do you like best?
+				</p>
+		
+				<ul id="city">
+					<li id="bj">Beijing</li>
+					<li>Shanghai</li>
+					<li>Tokyo</li>
+					<li>Seoul</li>
+				</ul>
+		
+				<br>
+				<br>
+		    </div>
+			
+		</div>
+		<div id="btnList">
+			<div><button id="btn01">1 Create node Aberdeen，add under the #city</button></div>
+			<div><button id="btn02">2 Add london before #bj</button></div>
+			<div><button id="btn03">3 Replace node #bj by node Leeds</button></div>
+			<div><button id="btn04">4 Delete node #bj</button></div>
+			<div><button id="btn05">5 Read HTML code in #city</button></div>
+			<div><button id="btn06">6 Set HTML code in #bj</button></div>
+			<div><button id="btn07">7 Create node Glasgow under #city</button></div>
+	
+		</div>
+	</body>
+</html>

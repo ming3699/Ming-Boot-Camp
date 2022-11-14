@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东 top navigation bar</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <style>
+        .clearfix::before,
+        .clearfix::after{
+            content:'' ;
+            display: table;
+            clear: both;
+        }
+        body{
+            font:12px/150% tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;;
+            color: #666;
+        }
+        .top-bar-wrapper{
+            width: 100%;
+            background-color: #e3e4e5;
+            height: 30px;
+            line-height: 30px;
+            border-bottom: #ddd solid 1px;
+        }
+        .top-bar{
+            width: 1190px;
+            margin: 0 auto;
+            position: relative;
+            /* background-color: red; */
+        }
+           /* font style */
+           .top-bar a,
+        .top-bar span,
+        .top-bar i{
+            color: #999;
+            text-decoration: none;
+        }
+        .top-bar a:hover,
+        .top-bar a.highlight{
+            color: #f10215;
+        }
+        .location{
+            float: left;
+        }
+        .location .fas{
+            font-size: 13px;
+            color: #f10215;
+        }
+        /* city-list effectiveness */
+        .location .city-list{
+            display: none;
+            width: 320px;
+            height: 436px;
+            background-color: white;
+            border: 1px solid rgb(204, 204, 204);
+            /* absolube location */
+            position: absolute;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+            top: 31px;
+            /* left: -50px; */
+            z-index: 999;
+        }
+        .location:hover .city-list{
+            display: block;
+        }
+        .current-city{
+            padding: 0 10px;
+            border: 1px solid transparent;
+            border-bottom: none;
+           position: relative;
+           z-index: 9999;
+        }
+        /* current-city 移入效果 */
+        .location:hover .current-city{
+           background-color: white;
+           border: 1px solid rgb(204, 204, 204);
+           border-bottom: none;
+           padding-bottom: 1px;
+        }
+        /* halving line */
+        .shortcut .line{
+            width: 1px;
+            height: 10px;
+            background-color: #999;
+            margin: 12px 12px 0;
+        }
+        .shortcut{
+            float: right;
+        }
+        .shortcut li{
+            float: left;
+        }
+        .shortcut .fas{
+            font-size: 13px;
+                margin: 0 1px;
+            vertical-align: -10%;
+        }
+     
+    </style>
+</head>
+
+<body>
+    <!-- Outer Wrapper -->
+    <div class="top-bar-wrapper">
+        <!-- Inner Wrapper -->
+        <div class="top-bar clearfix">
+            <!-- left side menu -->
+            <div class="location">
+                <div class="current-city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="javascript:;">Aberdeen</a>
+                </div>
+                <!-- city list -->
+                <div class="city-list"></div>
+            </div>
+            <!-- right side menu -->
+            <ul class="shortcut clearfix">
+                <li>
+                    <a href="javascript:;">please Sign In /</a>
+                    <a class="highlight" href="javascript:;">Register</a>
+                </li>
+                <!-- halving line -->
+                <li class="line"></li>
+                <li><a href="javascript:;">My order</a></li>
+
+                <li class="line"></li>
+                <li><a href="javascript:;">My JD</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="line"></li>
+                <li><a href="javascript:;">JD Club</a></li>
+
+                <li class="line"></li>
+                <li><a class="highlight" href="javascript:;">Business Buy</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"> </li>
+                <li><span>Cumstomer Service</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"> </li>
+                <li><span>Navigation</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"> </li>
+                <li><span>JD Mobile</span>
+                </li>
+                
+
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

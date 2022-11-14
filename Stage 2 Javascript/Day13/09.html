@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>pictures</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#outer{
+				width: 500px;
+				margin: 50px auto;
+				padding: 10px;
+				background-color: aqua;
+				text-align: center;
+			}
+		</style>
+		
+		<script>
+			window.onload=function(){
+				/*
+				 * 点击按钮切换图片
+				 */
+				//获取两个按钮
+				var prev=document.getElementById("prev");
+				var next=document.getElementById("next");
+				// 要切换图片就要修改img标签的src属性
+				// 获取img标签
+				var img=document.getElementsByTagName("img")[0];
+				// alert(img);
+				// 创建一个数组，用来保存图片的路径
+				var imgArr=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg"];
+				// 创建一个变量，来保存当前正在显示的图片索引
+				var index=0;
+				// 获取id为info的p元素
+				var info=document.getElementById("info");
+				// 设置提示文字
+				info.innerHTML="P"+(index+1)+"in"+imgArr.length;
+				
+				//分别为两个按钮绑定单击响应函数
+				prev.onclick=function(){
+					// alert("previous");
+					index--;
+					if(index<0){
+						index=imgArr.length-1;
+					}
+					img.src=imgArr[index];
+					// 当点击按钮以后，重新设置信息
+					info.innerHTML="p " + (index+1)+" in "+ imgArr.length;
+				};
+				
+				next.onclick=function(){
+					// alert("next");
+					index++;
+					if(index>imgArr.length-1){
+						index=imgArr.length-1;
+						index=0;
+					}
+					//切换图片就是修改img的src属性
+					//要修改一个元素的属性 元素.属性 = 属性值
+					img.src=imgArr[index];
+					// 当点击按钮以后，重新设置信息
+					info.innerHTML="P " + (index+1) +" in " + imgArr.length;
+				};
+			};
+		</script>
+		
+	</head>
+	<body>
+		<div id="outer">
+			<p id="info"> </p>
+	      <img src="img/1.jpg" alt="icecream" />
+		  <button id="prev">previous</button>
+		  <button id="next">next</button>
+		  
+		</div>
+	</body>
+</html>
